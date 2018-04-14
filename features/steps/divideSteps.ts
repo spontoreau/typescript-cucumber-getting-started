@@ -7,7 +7,11 @@ Given('a calculator', function() {
 });
 
 When('I divide {int} by {int}', function(number1: number, number2: number) {
-    this.actual = this.calculator.divide(number1, number2);
+    try {
+        this.actual = this.calculator.divide(number1, number2);
+    } catch(error) {
+        this.error = error;
+    }
 });
 
 Then("the result is {int}", function(expected: number) {
@@ -15,5 +19,6 @@ Then("the result is {int}", function(expected: number) {
 });
 
 Then("an error occurred with the following message {string}", function(expected: string) {
-    throw new Error("Not implemented");
+    expect(this.error).to.be.not.null;
+    expect(this.error.message).to.be.equal("Impossible to divide by 0");
 });
