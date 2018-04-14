@@ -1,0 +1,26 @@
+{
+  "name": "typescript-cucumber-getting-started",
+  "version": "1.0.0",
+  "description": "Blog post sample",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spontoreau/typescript-cucumber-getting-started.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/spontoreau/typescript-cucumber-getting-started/issues"
+  },
+  "homepage": "https://github.com/spontoreau/typescript-cucumber-getting-started#readme",
+  "devDependencies": {
+    "@types/chai": "^4.1.2",
+    "@types/cucumber": "^4.0.1",
+    "chai": "^4.1.2",
+    "cucumber": "^4.2.1"
+  }
+}
