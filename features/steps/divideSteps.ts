@@ -1,15 +1,17 @@
-import { Given, When, Then } from "cucumber";
+import { expect } from 'chai';
+import { Given, When, Then, World, setWorldConstructor } from "cucumber";
+import { Calculator } from "../../src/calculator";
 
 Given('a calculator', function() {
-    throw new Error("Not implemented");
+    this.calculator = new Calculator();
 });
 
 When('I divide {int} by {int}', function(number1: number, number2: number) {
-    throw new Error("Not implemented");
+    this.actual = this.calculator.divide(number1, number2);
 });
 
 Then("the result is {int}", function(expected: number) {
-    throw new Error("Not implemented");
+    expect(this.actual).to.be.equal(expected);
 });
 
 Then("an error occurred with the following message {string}", function(expected: string) {
