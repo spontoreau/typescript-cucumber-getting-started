@@ -1,12 +1,12 @@
-import { expect } from 'chai';
-import { Given, When, Then, World } from "cucumber";
+import { expect } from "chai";
+import { Given, When, Then } from "cucumber";
 import { Calculator } from "../../src/calculator";
 
-Given('a calculator', function() {
+Given("a calculator", function() {
     this.calculator = new Calculator();
 });
 
-When('I divide {int} by {int}', function(number1: number, number2: number) {
+When("I divide {int} by {int}", function(number1: number, number2: number) {
     try {
         this.actual = this.calculator.divide(number1, number2);
     } catch(error) {
