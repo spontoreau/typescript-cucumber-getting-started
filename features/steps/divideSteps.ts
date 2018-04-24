@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { Given, When, Then, World, setWorldConstructor } from "cucumber";
+import { Given, When, Then, World } from "cucumber";
 import { Calculator } from "../../src/calculator";
 
 Given('a calculator', function() {
